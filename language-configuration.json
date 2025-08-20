@@ -1,0 +1,11 @@
+{
+  "comments": {
+    "lineComment": "#"
+  },
+  "folding": {
+    "markers": {
+      "start": "^\\s*:(SubBasins|HRUs|HydrologicProcesses|HRUGroup|ProcessGroup)\\b",
+      "end": "^\\s*:(EndSubBasins|EndHRUs|EndHydrologicProcesses|EndHRUGroup|EndProcessGroup)\\b"
+    }
+  }
+}

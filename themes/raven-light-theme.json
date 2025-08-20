@@ -1,0 +1,74 @@
+{
+  "name": "Raven Light",
+  "type": "light",
+  "colors": {
+    "editor.background": "#FFFFFF",
+    "editor.foreground": "#000000"
+  },
+  "tokenColors": [
+    {
+      "name": "Line Comments",
+      "scope": [
+        "comment.line.hash.raven-input",
+        "comment.line.filetype.raven-input",
+        "comment.line.writtenby.raven-input",
+        "comment.line.creationdate.raven-input"
+      ],
+      "settings": {
+        "foreground": "#008000"
+      }
+    },
+    {
+      "name": "Folder in Code1",
+      "scope": [
+        "keyword.control.folder.open.raven-input",
+        "keyword.control.folder.close.raven-input"
+      ],
+      "settings": {
+        "foreground": "#000080"
+      }
+    },
+    {
+      "name": "Keywords1",
+      "scope": "keyword.other.keywords1.raven-input",
+      "settings": {
+        "foreground": "#000080"
+      }
+    },
+    {
+      "name": "Keywords2",
+      "scope": "keyword.other.keywords2.raven-input",
+      "settings": {
+        "foreground": "#800080"
+      }
+    },
+    {
+      "name": "Keywords3",
+      "scope": "keyword.other.keywords3.raven-input",
+      "settings": {
+        "foreground": "#0000FF"
+      }
+    },
+    {
+      "name": "Keywords4",
+      "scope": "keyword.other.keywords4.raven-input",
+      "settings": {
+        "foreground": "#0000FF"
+      }
+    },
+    {
+      "name": "Delimiters1",
+      "scope": "entity.name.tag.delimiter.raven-input",
+      "settings": {
+        "foreground": "#000080"
+      }
+    },
+    {
+      "name": "Numbers",
+      "scope": "constant.numeric.raven-input",
+      "settings": {
+        "foreground": "#000000"
+      }
+    }
+  ]
+}

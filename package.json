@@ -1,0 +1,41 @@
+{
+  "name": "raven-vscode",
+  "displayName": "Raven Toolkit",
+  "description": "Syntax highlighting and themes for Raven hydrological model files",
+  "version": "0.1.0",
+  "publisher": "Sam Albers",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "raven-input",
+        "aliases": ["Raven Input Files"],
+        "extensions": [".rvi", ".rvt", ".rvc", ".rvh", ".rvp"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "raven-input",
+        "scopeName": "source.raven-input",
+        "path": "./syntaxes/raven-input.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "Raven Light",
+        "uiTheme": "vs",
+        "path": "./themes/raven-light-theme.json"
+      },
+      {
+        "label": "Raven Dark",
+        "uiTheme": "vs-dark", 
+        "path": "./themes/raven-dark-theme.json"
+      }
+    ]
+  }
+}

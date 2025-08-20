@@ -1,0 +1,122 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Raven Input Files",
+  "scopeName": "source.raven-input",
+  "patterns": [
+    {
+      "include": "#line-comments"
+    },
+    {
+      "include": "#folders-in-code1"
+    },
+    {
+      "include": "#keywords1"
+    },
+    {
+      "include": "#keywords2"
+    },
+    {
+      "include": "#keywords3"
+    },
+    {
+      "include": "#keywords4"
+    },
+    {
+      "include": "#delimiters"
+    },
+    {
+      "include": "#numbers"
+    }
+  ],
+  "repository": {
+    "line-comments": {
+      "patterns": [
+        {
+          "name": "comment.line.hash.raven-input",
+          "match": "#.*$"
+        },
+        {
+          "name": "comment.line.filetype.raven-input",
+          "match": ":FileType.*$"
+        },
+        {
+          "name": "comment.line.writtenby.raven-input",
+          "match": ":WrittenBy.*$"
+        },
+        {
+          "name": "comment.line.creationdate.raven-input",
+          "match": ":CreationDate.*$"
+        }
+      ]
+    },
+    "folders-in-code1": {
+      "patterns": [
+        {
+          "name": "keyword.control.folder.open.raven-input",
+          "match": "\\b(:SubBasins|:HRUs|:HydrologicProcesses|:HRUGroup|:ProcessGroup)\\b"
+        },
+        {
+          "name": "keyword.control.folder.close.raven-input",
+          "match": "\\b(:EndSubBasins|:EndHRUs|:EndHydrologicProcesses|:EndHRUGroup|:EndProcessGroup)\\b"
+        }
+      ]
+    },
+    "keywords1": {
+      "patterns": [
+        {
+          "name": "keyword.other.keywords1.raven-input",
+          "match": ":[A-Za-z][A-Za-z0-9_]*\\b",
+          "comment": "Any keyword starting with colon (prefix matching from UDL)"
+        },
+        {
+          "name": "keyword.other.keywords1.raven-input", 
+          "match": ":-->\\b",
+          "comment": "Special arrow keyword from UDL"
+        }
+      ]
+    },
+    "keywords2": {
+      "patterns": [
+        {
+          "name": "keyword.other.keywords2.raven-input",
+          "match": "^\\s*(PET_|SW_RAD_|SW_CLOUD_CORR_|POTMELT_|OROCORR_|SW_CANOPY_CORR|LW_RAD_|WINDVEL_|RAINSNOW_|CLOUDCOV_|PRECIP_ICEPT_|MONTHINT_|ROUTE_|INTERP_|ORDERED_SERIES|SNOALB_|SNOBAL_|RAVEN_|GMELT_|PRECIP_RAVEN|SOILEVAP_|INF_|GINFIL_|PERC_|BASE_|GRELEASE_|CANEVP_|DFLOW_|SEEP_|OPEN_WATER_|LAKE_EVAP_|FREEZE_|SNOTEMP_|RISE_|OVERFLOW_|CONVOL_|NASH_SUTCLIFFE|RMSE|PCT_BIAS|KLING_GUPTA|\\[DEFAULT\\]|_AUTO|SOIL_TWO_LAYER|SOIL_MULTILAYER|SOIL_ONE_LAYER)\\b",
+          "comment": "Keywords2 only when at start of line (not as parameter values)"
+        }
+      ]
+    },
+    "keywords3": {
+      "patterns": [
+        {
+          "name": "keyword.other.keywords3.raven-input",
+          "match": "^\\s*(MULTIPLE|PONDED_WATER|SURFACE_WATER|SOIL\\[0\\]|SOIL\\[1\\]|SOIL\\[2\\]|SOIL\\[3\\]|SOIL\\[4\\]|SOIL\\[5\\]|SOIL\\[6\\]|SNOW_LIQ|CANOPY|CANOPY_SNOW|SNOW|ATMOSPHERE|ATMOS_PRECIP|DEPRESSION|GLACIER|SNOW_TEMP|CONVOLUTION\\[0\\]|CONVOLUTION\\[1\\]|GLACIER_ICE|LAKE|WETLAND|HRU_TYPE|HRU_GROUP|IS_NOT|IS|DAILY|MONTHLY|CONTINUOUS|AVERAGE|BY_HRU|BY_BASIN|BY_HRUGROUP|BY_SBGROUP)\\b",
+          "comment": "Keywords3 only when at start of line (not as parameter values)"
+        }
+      ]
+    },
+    "keywords4": {
+      "patterns": [
+        {
+          "name": "keyword.other.keywords4.raven-input",
+          "match": "^\\s*(LAKE|WETLAND|GLACIER)\\b",
+          "comment": "Keywords4 only when at start of line (not as parameter values)"
+        }
+      ]
+    },
+    "delimiters": {
+      "patterns": [
+        {
+          "name": "entity.name.tag.delimiter.raven-input",
+          "match": "\\b(:Attributes|:Units|:Parameters|:RedirectToFile)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.raven-input",
+          "match": "\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)?\\b"
+        }
+      ]
+    }
+  }
+}
